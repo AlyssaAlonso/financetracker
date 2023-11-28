@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Bill Details</h1>
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ bill.name }}</span>
+    <p>Category: {{ bill.billegory }}</p>
+    <p>Amount: {{ bill.amount }}</p>
+  </div>
+  <div class="card-action">
+    <a href="{% url 'bills_update' bill.id %}">Edit</a>
+    <a href="{% url 'bills_delete' bill.id %}">Delete</a>
+  </div>
+</div>
+
+{% endblock %}

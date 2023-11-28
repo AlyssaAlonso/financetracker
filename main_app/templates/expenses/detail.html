@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Expense Details</h1>
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ expense.name }}</span>
+    <p>Category: {{ expense.expenseegory }}</p>
+    <p>Amount: {{ expense.amount }}</p>
+  </div>
+  <div class="card-action">
+    <a href="{% url 'expenses_update' expense.id %}">Edit</a>
+    <a href="{% url 'expenses_delete' expense.id %}">Delete</a>
+  </div>
+</div>
+
+{% endblock %}

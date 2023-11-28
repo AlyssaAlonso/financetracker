@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Finance Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <header class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <ul>
+            <li>
+              <a href="{% url 'home' %}" class="left brand-logo"
+                >&nbsp;&nbsp;Finance Tracker</a
+              >
+            </li>
+          </ul>
+          <ul class="right">
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'finances' %}">My Finances</a></li>
+            <!-- <li><a href="{% url 'incomes_create' %}">Add an Income</a></li> -->
+            <!-- <li><a href="{% url 'incomes_index' %}">Incomes</a></li> -->
+            <!-- <li><a href="{% url 'bills_create' %}">Add a Bill</a></li> -->
+            <!-- <li><a href="{% url 'bills_index' %}">Bills</a></li> -->
+            <!-- <li><a href="{% url 'expenses_create' %}">Add an Expense</a></li> -->
+            <!-- <li><a href="{% url 'expenses_index' %}">Expenses</a></li> -->
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="container">{% block content %} {% endblock %}</main>
+    <footer class="page-footer">
+      <div class="right">
+        All Rights Reserved, &copy; 2023 Finance Tracker &nbsp;
+      </div>
+    </footer>
+  </body>
+</html>

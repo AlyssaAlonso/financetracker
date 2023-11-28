@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>My Finances</h1>
+<h3><a href="{% url 'incomes_index' %}">Incomes</a></h3>
+<h3><a href="{% url 'bills_index' %}">Bills</a></h3>
+<h3><a href="{% url 'expenses_index' %}">Expenses</a></h3>
+
+{% endblock %}

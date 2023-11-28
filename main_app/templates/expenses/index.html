@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Expenses</h1>
+<h3><a href="{% url 'expenses_create' %}">Add an Expense</a></h3>
+
+{% for expense in expenses %}
+<a href="{% url 'expenses_detail' expense.id %}">
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title">{{ expense.name }}</span>
+      <p>Category: {{ expense.category }}</p>
+      <p>Amount: {{ expense.amount }}</p>
+    </div>
+  </div>
+</a>
+{% endfor %} {% endblock %}
